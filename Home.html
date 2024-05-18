@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO WEBSITE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- font awesome link -->
+</head>
+
+
+<body>
+
+    <!-- ******* -->
+            <nav>
+                <div class="header">
+            <div class="logo">Benat Asban.</div>
+            <div class="barnav">
+                <ul> 
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="About Me.html">About Me</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+                </div>
+                <div class="menu">
+                    <div class="menu-line"></div>
+                    <div class="menu-line"></div>
+                    <div class="menu-line"></div>
+                </div>
+            </div>
+            </nav>
+        
+
+
+        <!-- ******* hero section ******* -->
+        <div class="hero">
+            <div class="content">
+                <div class="hero-main">
+                    <div class="hero-text">
+                        <h2> <span>Hi I,m Benat Asban</span></h2>
+                        <div class="animated-text">
+                            <span></span>
+                        </div>
+
+                        <p>This is my official portfolio website to showns all details <br>and work experince  web development</p>
+
+                        <a href="download-cv.pdf.pdf" download>DOWNLOAD CV</a>
+                    </div>
+
+
+                    <div class="skills">
+                        <p>Tech skills</p>
+                        <div class="logos">
+                            <ul>
+                                <li><img src="images/html.png" alt="html"></li>
+                                <li><img src="images/css.png" alt="css"></li>
+                                <li><img src="images/js.png" alt="js"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="images/hero-ime.jpg" alt="man image">
+            </div>
+        </div>
+
+
+
+       <!--  *********** Footer *********** -->
+
+       <footer>
+        <div class="footer">
+            <div class="get">Get In Touch</div>
+            <div class="footercontainer">
+                <div class="socialicons">
+                    <a href="mailto:benatasban@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://gitlab.com/BenatAsban" target="_blank"><i class="fa-brands fa-gitlab"></i></a>
+                    <a href="https://www.linkedin.com/in/benat-asban-1177b6303/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/BenatAsban" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="tel:8428351029" target="_blank"><i class="fa-solid fa-phone"></i></a>
+                </div>
+
+                
+
+            </div>
+        </div>
+
+        <div class="footerbottom">
+            <p>Copyright &copy;2023; Desiged by <span class="disigner">Benat</span></p>
+        </div>
+
+
+    </footer>
+  
+  
+        <!--  *********** Loading ********* -->
+
+        <div class="loader">
+            <span class="spinner"></span>
+        </div>
+
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+    
+    </body>
+
+<script>
+    const menu = document.querySelector('.menu')
+    const menuList = document.querySelector('nav ul')
+    menu.addEventListener('click',()=>{
+        menuList.classList.toggle('showmenu')
+    })
+    </script>
+
+
+<script>
+
+    const load = document.querySelector(".loader");
+
+    window.addEventListener("load", function(){
+        load.style.display = "none" 
+    });
+</script>
+
+
+<script>
+
+/*===== SCROLL REVEAL ANIMATION =====*/
+const sr = ScrollReveal({
+    reset: true,
+});
+ 
+sr.reveal('.content',{delay: 200,distance: '60px',duration: 2000,origin: 'left',}); 
+sr.reveal('.hero-image',{delay: 400,distance: '60px',duration: 2000,origin: 'bottom',});
+
+
+sr.reveal('.get',{delay: 200, distance: '60px',duration: 2000,origin: 'left',}); 
+sr.reveal('.socialicons',{ delay: 200,distance: '60px',duration: 2000,origin: 'right',});
+
+
+</script>
+
+
+
+
+<html>

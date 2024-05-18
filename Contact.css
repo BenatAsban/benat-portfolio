@@ -1,0 +1,1943 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "poppins",sans-serif;
+}
+
+:root {
+    --bg-color: #1e1e1e;
+    --bg-light-color: #303036;
+    --text-color: #f9f9f9;
+    --para-color: #9c9c9c;
+    --main-color: #8f43ee;
+    --light-color: #b37df5;
+    --extra-light: #cea5ff;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+
+html,body{
+    width: 100%;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+
+
+
+/* ******* Header *******/
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: .9rem 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    z-index: 100;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+   left: -280px;
+}
+
+nav {
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+}
+
+nav a {
+    color: var(--text-color);
+    position: relative;
+    right: -320px;
+    
+}
+
+nav a:hover{
+    color: var(--main-color);
+}
+    
+nav li{
+    display: inline-block;
+    margin: 20px;
+}
+
+/******* Link Hover Effect ******* */
+
+nav a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+nav a:after{
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--main-color);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+/* *********Contact ******** */
+
+.contact-form-container{
+    text-align: center;
+    padding: 160px 260px 7rem;
+}
+
+.heading{
+    font-size: 2.3rem;
+    font-weight: 500;
+    text-align: center;
+    color: var(--text-color);
+    position: relative;
+    top: -20px;
+}
+
+span{
+    color: var(--main-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea{
+    font-size: 15px;
+    font-weight: 400;
+    display: inline-block;
+    width: 100%;
+    height: 3.2rem;
+    margin-bottom: 20px;
+    padding-top: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: var(--text-color);
+    border: 2px solid var(--para-color);
+    border-radius: 2px;
+    background: var(--bg-light-color);
+    transition: all 0.3s;
+}
+
+.btn {
+    width: 100%;
+    padding: 8px 45px;
+    background: var(--main-color);
+    box-shadow: 0 0 12px var(--main-color);
+    color: var(--text-color);
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+    border-radius: 2px;
+}
+
+.btn:hover {
+    background: transparent;
+    border: 2px solid var(--main-color);
+}
+
+
+/*  ******** Footer ********* */
+
+.footer{
+    background-color: var(--bg-light-color);
+   margin-top: 100px;
+  }
+  
+  .footercontainer{
+    width: 100%;
+    padding: 75px;
+  }
+  
+  /* ********** get in touch ********* */
+  
+  .footer .get{
+    color: var(--para-color);
+    font-size: 40px;
+    position: relative;
+    top: 125px;
+    left: 200px;
+  }
+  
+  /* ************ Socials ************ */
+  
+  .footer .socialicons{
+    position: relative;
+    right: -800px;
+  }
+  
+  .socialicons a{
+    font-size: 31px;
+    text-decoration: none;
+    padding: 10px;
+    color: var(--text-color);
+  }
+  
+  .socialicons a i:hover{
+    background: var(--main-color);
+    border: 10px solid var(--main-color);
+    border-radius: 50%;
+  }
+  
+  
+  /* ********** Copyrights ********** */
+  
+  .footerbottom{
+    padding: 1px;
+    text-align: center;
+  }
+  
+  
+  .footerbottom p{
+    color: #f9f9f9;
+    font-size: 10px;
+  }
+  
+  .disigner{
+    color: #f9f9f9;
+    opacity: 0.7;
+    text-decoration: uppercase;
+    font-weight: 700;
+    margin: 0px 5;
+  }
+
+/* ******* Custom Scrollbar ******** */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--para-color); 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 20px;
+    
+}
+
+::-webkit-scrollbar-track:hover {
+    background-color: var(--bg-color);
+}
+
+
+/*  ********* Loading ********** */
+
+
+.loader {
+    width: 100%;
+    height: 170vh;
+    position: fixed;
+    top: -250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    z-index: 100;
+    
+}
+
+.iframe {
+    display: none;
+}
+
+.spinner {
+    width: 80px;
+    height: 80px;
+    border: 10px solid #45474b;
+    border-radius: 100%;
+    border-top: 10px solid var(--main-color);
+    animation: spin 1.4s linear infinite;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* ******************************** 1200px ***************************************** */
+
+
+@media (max-width:1200px){
+
+    html,body{
+        width: 100%;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      
+      html{
+        scroll-behavior: smooth;
+      }
+
+
+
+/* ******* Header *******/
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: .9rem 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    z-index: 100;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+   left: -280px;
+}
+
+nav {
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+}
+
+nav a {
+    color: var(--text-color);
+    position: relative;
+    right: -300px;
+    
+}
+
+nav a:hover{
+    color: var(--main-color);
+}
+    
+nav li{
+    display: inline-block;
+    margin: 20px;
+}
+
+/******* Link Hover Effect ******* */
+
+nav a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+nav a:after{
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--main-color);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+/* *********Contact ******** */
+
+.contact-form-container{
+    text-align: center;
+    padding: 560px 260px 7rem;
+}
+
+.heading{
+    font-size: 2.3rem;
+    font-weight: 500;
+    text-align: center;
+    color: var(--text-color);
+    position: relative;
+    top: -20px;
+}
+
+span{
+    color: var(--main-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea{
+    font-size: 15px;
+    font-weight: 400;
+    display: inline-block;
+    width: 100%;
+    height: 3.2rem;
+    margin-bottom: 20px;
+    padding-top: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: var(--text-color);
+    border: 2px solid var(--para-color);
+    border-radius: 2px;
+    background: var(--bg-light-color);
+    transition: all 0.3s;
+}
+
+.btn {
+    width: 100%;
+    padding: 8px 45px;
+    background: var(--main-color);
+    box-shadow: 0 0 12px var(--main-color);
+    color: var(--text-color);
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+    border-radius: 2px;
+}
+
+.btn:hover {
+    background: transparent;
+    border: 2px solid var(--main-color);
+}
+
+
+/*  ******** Footer ********* */
+
+.footer{
+    background-color: var(--bg-light-color);
+   margin-top: 100%;
+}
+
+.footercontainer{
+    width: 100%;
+    padding: 75px;
+}
+
+/* ********** get in touch ********* */
+
+.footer .get{
+    color: var(--para-color);
+    font-size: 40px;
+    position: relative;
+    top: 115px;
+    left: 150px;
+}
+
+/* ************ Socials ************ */
+
+.footer .socialicons{
+    position: relative;
+    right: -700px;
+}
+
+.socialicons a{
+    font-size: 31px;
+    text-decoration: none;
+    padding: 10px;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.socialicons a:hover{
+    background-color: var(--main-color);
+    border-radius: 100%;
+  }
+
+
+/* ********** Copyrights ********** */
+
+.footerbottom{
+    padding: 1px;
+    text-align: center;
+}
+
+
+.footerbottom p{
+    color: #f9f9f9;
+    font-size: 10px;
+}
+
+.disigner{
+    opacity: 0.7;
+    text-decoration: uppercase;
+    font-weight: 700;
+    margin: 0px 5;
+}
+
+/* ******* Custom Scrollbar ******** */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--para-color); 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 20px;
+    
+}
+
+::-webkit-scrollbar-track:hover {
+    background-color: var(--bg-color);
+}
+
+
+/*  ********* Loading ********** */
+
+
+.loader {
+    width: 100%;
+    height: 170vh;
+    position: absolute;
+    top: -600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    z-index: 100;
+    
+}
+
+.iframe {
+    display: none;
+}
+
+.spinner {
+    width: 80px;
+    height: 80px;
+    border: 10px solid #45474b;
+    border-radius: 100%;
+    border-top: 10px solid var(--main-color);
+    animation: spin 1.4s linear infinite;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+}
+
+
+
+/* ******************************** 1024px ***************************************** */
+
+
+@media (max-width:1024px){
+
+    html,body{
+        width: 100%;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      
+      html{
+        scroll-behavior: smooth;
+      }
+    
+    
+    
+    /* ******* Header *******/
+    
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: .9rem 0;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--bg-color);
+        z-index: 100;
+    }
+    
+    .logo {
+        font-size: 26px;
+        font-weight: 700;
+        color: var(--text-color);
+        text-decoration: none;
+        position: relative;
+       left: -180px;
+    }
+    
+    nav {
+        font-size: 20px;
+        font-weight: 700;
+        width: 100%;
+    }
+    
+    nav a {
+        color: var(--text-color);
+        position: relative;
+        right: -190px;
+        
+    }
+    
+    nav a:hover{
+        color: var(--main-color);
+    }
+        
+    nav li{
+        display: inline-block;
+        margin: 20px;
+    }
+    
+    /******* Link Hover Effect ******* */
+    
+    nav a:hover:after {
+        width: 100%;
+        left: 0;
+    }
+    
+    nav a:after{
+        content: "";
+        pointer-events: none;
+        bottom: -2px;
+        left: 50%;
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background-color: var(--main-color);
+        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition-duration: 400ms;
+        transition-property: width, left;
+    }
+    
+    /* *********Contact ******** */
+    
+    .contact-form-container{
+        text-align: center;
+        padding: 560px 260px 7rem;
+    }
+    
+    .heading{
+        font-size: 2.3rem;
+        font-weight: 500;
+        text-align: center;
+        color: var(--text-color);
+        position: relative;
+        top: -20px;
+    }
+    
+    span{
+        color: var(--main-color);
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    textarea{
+        font-size: 15px;
+        font-weight: 400;
+        display: inline-block;
+        width: 100%;
+        height: 3.2rem;
+        margin-bottom: 20px;
+        padding-top: 4px;
+        padding-left: 16px;
+        padding-right: 16px;
+        color: var(--text-color);
+        border: 2px solid var(--para-color);
+        border-radius: 2px;
+        background: var(--bg-light-color);
+        transition: all 0.3s;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 8px 45px;
+        background: var(--main-color);
+        box-shadow: 0 0 12px var(--main-color);
+        color: var(--text-color);
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: all 0.3s;
+        border-radius: 2px;
+    }
+    
+    .btn:hover {
+        background: transparent;
+        border: 2px solid var(--main-color);
+    }
+    
+     /*  ******** Footer ********* */
+
+.footer{
+    background-color: var(--bg-light-color);
+   margin-top: 100%;
+  }
+  
+  .footercontainer{
+    width: 100%;
+    padding: 75px;
+  }
+  
+  /* ********** get in touch ********* */
+  
+  .footer .get{
+    color: var(--para-color);
+    font-size: 40px;
+    position: relative;
+    top: 125px;
+    left: 150px;
+  }
+  
+  /* ************ Socials ************ */
+  
+  .footer .socialicons{
+    position: relative;
+    right: -550px;
+  }
+  
+  .socialicons a{
+    font-size: 31px;
+    text-decoration: none;
+    padding: 10px;
+    color: var(--text-color);
+    opacity: 0.9;
+  }
+  
+  .socialicons a:hover{
+    background-color: var(--main-color);
+    border-radius: 100%;
+  }
+  
+  
+  /* ********** Copyrights ********** */
+  
+  .footerbottom{
+    padding: 1px;
+    text-align: center;
+  }
+  
+  
+  .footerbottom p{
+    font-size: 10px;
+  }
+  
+  .disigner{
+    color: #f9f9f9;
+    opacity: 0.7;
+    text-decoration: uppercase;
+    font-weight: 700;
+    margin: 0px 5;
+  }
+    
+    /* ******* Custom Scrollbar ******** */
+    
+    ::-webkit-scrollbar {
+        width: 7px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: var(--para-color); 
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--main-color);
+        border-radius: 20px;
+        
+    }
+    
+    ::-webkit-scrollbar-track:hover {
+        background-color: var(--bg-color);
+    }
+    
+    
+    /*  ********* Loading ********** */
+    
+    
+    .loader {
+        width: 100%;
+        height: 170vh;
+        position: absolute;
+        top: -600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1e1e1e;
+        z-index: 100;
+        
+    }
+    
+    .iframe {
+        display: none;
+    }
+    
+    .spinner {
+        width: 80px;
+        height: 80px;
+        border: 10px solid #45474b;
+        border-radius: 100%;
+        border-top: 10px solid var(--main-color);
+        animation: spin 1.4s linear infinite;
+    }
+    
+    @keyframes spin{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    }
+
+    /* ******************************** 992px ***************************************** */
+
+
+@media (max-width:992px){
+
+     html,body{
+        width: 100%;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      
+      html{
+        scroll-behavior: smooth;
+      }
+    
+    
+    
+    /* ******* Header *******/
+    
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: .9rem 0;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--bg-color);
+        z-index: 100;
+    }
+    
+    .logo {
+        font-size: 26px;
+        font-weight: 700;
+        color: var(--text-color);
+        text-decoration: none;
+        position: relative;
+       left: -140px;
+    }
+    
+    nav {
+        font-size: 20px;
+        font-weight: 700;
+        width: 100%;
+    }
+    
+    nav a {
+        color: var(--text-color);
+        position: relative;
+        right: -170px;
+        
+    }
+    
+    nav a:hover{
+        color: var(--main-color);
+    }
+        
+    nav li{
+        display: inline-block;
+        margin: 20px;
+    }
+    
+    /******* Link Hover Effect ******* */
+    
+    nav a:hover:after {
+        width: 100%;
+        left: 0;
+    }
+    
+    nav a:after{
+        content: "";
+        pointer-events: none;
+        bottom: -2px;
+        left: 50%;
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background-color: var(--main-color);
+        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition-duration: 400ms;
+        transition-property: width, left;
+    }
+    
+    /* *********Contact ******** */
+    
+    .contact-form-container{
+        text-align: center;
+        padding: 560px 260px 7rem;
+    }
+    
+    .heading{
+        font-size: 2.3rem;
+        font-weight: 500;
+        text-align: center;
+        color: var(--text-color);
+        position: relative;
+        top: -20px;
+    }
+    
+    span{
+        color: var(--main-color);
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    textarea{
+        font-size: 15px;
+        font-weight: 400;
+        display: inline-block;
+        width: 100%;
+        height: 3.2rem;
+        margin-bottom: 20px;
+        padding-top: 4px;
+        padding-left: 16px;
+        padding-right: 16px;
+        color: var(--text-color);
+        border: 2px solid var(--para-color);
+        border-radius: 2px;
+        background: var(--bg-light-color);
+        transition: all 0.3s;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 8px 45px;
+        background: var(--main-color);
+        box-shadow: 0 0 12px var(--main-color);
+        color: var(--text-color);
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: all 0.3s;
+        border-radius: 2px;
+    }
+    
+    .btn:hover {
+        background: transparent;
+        border: 2px solid var(--main-color);
+    }
+    
+    /*  ******** Footer ********* */
+
+.footer{
+    background-color: var(--bg-light-color);
+   margin-top: 100%;
+  }
+  
+  .footercontainer{
+    width: 100%;
+    padding: 75px;
+  }
+  
+  /* ********** get in touch ********* */
+  
+  .footer .get{
+    color: var(--para-color);
+    font-size: 40px;
+    position: relative;
+    top: 90px;
+    left: 150px;
+  }
+  
+  /* ************ Socials ************ */
+  
+  .footer .socialicons{
+    position: relative;
+    right: -550px;
+    top: -35px;
+  }
+  
+  .socialicons a{
+    font-size: 31px;
+    text-decoration: none;
+    padding: 10px;
+    color: var(--text-color);
+    opacity: 0.9;
+  }
+  
+  .socialicons a:hover{
+    background-color: var(--main-color);
+    border-radius: 100%;
+  }
+  
+  
+  /* ********** Copyrights ********** */
+  
+  .footerbottom{
+    padding: 1px;
+    text-align: center;
+  }
+  
+  
+  .footerbottom p{
+    font-size: 10px;
+  }
+  
+  .disigner{
+    color: #f9f9f9;
+    opacity: 0.7;
+    text-decoration: uppercase;
+    font-weight: 700;
+    margin: 0px 5;
+  }
+    /* ******* Custom Scrollbar ******** */
+    
+    ::-webkit-scrollbar {
+        width: 7px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: var(--para-color); 
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--main-color);
+        border-radius: 20px;
+        
+    }
+    
+    ::-webkit-scrollbar-track:hover {
+        background-color: var(--bg-color);
+    }
+    
+    
+    /*  ********* Loading ********** */
+    
+    
+    .loader {
+        width: 100%;
+        height: 170vh;
+        position: absolute;
+        top: -600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1e1e1e;
+        z-index: 100;
+        
+    }
+    
+    .iframe {
+        display: none;
+    }
+    
+    .spinner {
+        width: 80px;
+        height: 80px;
+        border: 10px solid #45474b;
+        border-radius: 100%;
+        border-top: 10px solid var(--main-color);
+        animation: spin 1.4s linear infinite;
+    }
+    
+    @keyframes spin{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    }
+
+
+
+
+
+
+
+
+/* ********************************** 768px ****************************************** */
+
+@media (max-width: 768px) {
+
+    html,body{
+        width: 100%;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      
+      html{
+        scroll-behavior: smooth;
+      }
+
+
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 2.5rem ;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .logo {
+        font-size: 26px;
+        font-weight: 700;
+        color: var(--text-color);
+       position: absolute;
+       left: 40px;
+       top: 20px;
+    }
+
+
+    /* navigation inner text */
+    
+    .barnav li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 1.3rem;
+        left: -180px;
+    }
+
+    nav ul{
+        background-color: rgba(213, 121, 255, 0.67);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        display: flex;
+        overflow: hidden;
+       
+    }
+
+    /* ******* Menu ******** */
+
+.menu-line {
+    height: 3px;
+    width: 20px;
+    background-color: var(--text-color);
+    margin-bottom: 3px;
+}
+
+.menu {
+    cursor: pointer;
+}
+
+    .menu {
+        display: block;
+        position: absolute;
+        right: 40px;
+        top: 30px;
+    }
+
+    .showmenu{
+        display:block;
+        height: 13.7rem;
+        transition: .5s ease;
+    }
+
+
+/******* Link Hover Effect ******* */
+
+nav a:hover:after {
+width: 100%;
+left: 0%;
+}
+
+nav a:after{
+content: "";
+pointer-events: none;
+bottom: -2px;
+left: 50%;
+position: absolute;
+width: 0%;
+height: 2px;
+background-color: var(--main-color);
+transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+transition-duration: 400ms;
+transition-property: width, left;
+}
+
+
+/* ********* Contact Me ********* */
+
+.contact-form-container {
+    text-align: center;
+    padding: 560px 60px 4rem;
+}
+
+
+    /*  ******** Footer ********* */
+
+.footer{
+    background-color: var(--bg-light-color);
+   margin-top: 100%;
+  }
+  
+  .footercontainer{
+    width: 100%;
+    padding: 75px;
+  }
+  
+  /* ********** get in touch ********* */
+  
+  .footer .get{
+    color: var(--para-color);
+    font-size: 40px;
+    position: relative;
+    top: 55px;
+    left: 250px;
+  }
+  
+  /* ************ Socials ************ */
+  
+  .footer .socialicons{
+    position: relative;
+    right: -180px;
+    top: 30px;
+  }
+  
+  .socialicons a{
+    font-size: 26px;
+    text-decoration: none;
+    padding: 10px;
+    color: var(--text-color);
+    opacity: 0.9;
+  }
+  
+  .socialicons a:hover{
+    background-color: var(--main-color);
+    border-radius: 100%;
+  }
+  
+  
+  /* ********** Copyrights ********** */
+  
+  .footerbottom{
+    padding: 1px;
+    text-align: center;
+  }
+  
+  
+  .footerbottom p{
+    color: #f9f9f9;
+    font-size: 10px;
+  }
+  
+  .disigner{
+    opacity: 0.7;
+    text-decoration: uppercase;
+    font-weight: 700;
+    margin: 0px 5;
+  }
+  
+}
+
+
+/* ********************************** 600px ****************************************** */
+
+@media (max-width: 600px) {
+
+
+    html,body{
+        width: 100%;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      
+      html{
+        scroll-behavior: smooth;
+      }
+
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 2.5rem ;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .logo {
+        font-size: 26px;
+        font-weight: 700;
+        color: var(--text-color);
+       position: absolute;
+       left: 40px;
+       top: 20px;
+    }
+
+
+    /* navigation inner text */
+    
+    .barnav li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 1.3rem;
+        left: -180px;
+    }
+
+    nav ul{
+        background-color: rgba(213, 121, 255, 0.67);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        display: flex;
+        overflow: hidden;
+       
+    }
+
+    /* ******* Menu ******** */
+
+.menu-line {
+    height: 3px;
+    width: 20px;
+    background-color: var(--text-color);
+    margin-bottom: 3px;
+}
+
+.menu {
+    cursor: pointer;
+}
+
+    .menu {
+        display: block;
+        position: absolute;
+        right: 40px;
+        top: 30px;
+    }
+
+    .showmenu{
+        display:block;
+        height: 13.7rem;
+        transition: .5s ease;
+    }
+
+
+/******* Link Hover Effect ******* */
+
+nav a:hover:after {
+width: 100%;
+left: 0%;
+}
+
+nav a:after{
+content: "";
+pointer-events: none;
+bottom: -2px;
+left: 50%;
+position: absolute;
+width: 0%;
+height: 2px;
+background-color: var(--main-color);
+transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+transition-duration: 400ms;
+transition-property: width, left;
+}
+
+
+/* ********* Contact Me ********* */
+
+.contact-form-container {
+    text-align: center;
+    padding: 560px 40px 4rem;
+}
+
+/*  ******** Footer ********* */
+
+.footer{
+    background-color: var(--bg-light-color);
+   margin-top: 130%;
+  }
+  
+  .footercontainer{
+    width: 100%;
+    padding: 75px;
+  }
+  
+  /* ********** get in touch ********* */
+  
+  .footer .get{
+    color: var(--para-color);
+    font-size: 40px;
+    position: relative;
+    top: 55px;
+    left: 190px;
+  }
+  
+  /* ************ Socials ************ */
+  
+  .footer .socialicons{
+    position: relative;
+    right: -110px;
+    top: 30px;
+  }
+  
+  .socialicons a{
+    font-size: 26px;
+    text-decoration: none;
+    padding: 10px;
+    color: var(--text-color);
+    opacity: 0.9;
+  }
+  
+  .socialicons a:hover{
+    background-color: var(--main-color);
+    border-radius: 100%;
+  }
+  
+  
+  /* ********** Copyrights ********** */
+  
+  .footerbottom{
+    padding: 1px;
+    text-align: center;
+  }
+  
+  
+  .footerbottom p{
+    color: #f9f9f9;
+    font-size: 10px;
+  }
+  
+  .disigner{
+    opacity: 0.7;
+    text-decoration: uppercase;
+    font-weight: 700;
+    margin: 0px 5;
+  }
+  
+}
+
+
+
+
+/* ********************************** 430px ****************************************** */
+
+@media (max-width: 430px) {
+
+
+    html,body{
+        width: 100%;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      
+      html{
+        scroll-behavior: smooth;
+      }
+
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 2.5rem ;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .logo {
+        font-size: 26px;
+        font-weight: 700;
+        color: var(--text-color);
+       position: absolute;
+       left: 40px;
+       top: 10px;
+    }
+
+
+  /* navigation bar */
+
+  nav {
+    flex-direction: column;
+  }
+
+  .barnav li {
+    display: block;
+    text-align: center;
+    margin: 1.3rem 0;
+    margin-left: 50px;
+  }
+
+  nav ul {
+    background-color: rgba(213, 121, 255, 0.67);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    display: flex;
+  }
+
+  .logo {
+    align-self: flex-start;
+    margin: 20px 0px 0px -20px;
+  }
+    /* ******* Menu ******** */
+
+.menu-line {
+    height: 3px;
+    width: 20px;
+    background-color: var(--text-color);
+    margin-bottom: 3px;
+}
+
+.menu {
+    cursor: pointer;
+}
+
+    .menu {
+        display: block;
+        position: absolute;
+        right: 40px;
+        top: 30px;
+    }
+
+    .showmenu{
+        display:block;
+        height: 13.7rem;
+        transition: .5s ease;
+    }
+
+
+/******* Link Hover Effect ******* */
+
+nav a:hover:after {
+width: 100%;
+left: 0%;
+}
+
+nav a:after{
+content: "";
+pointer-events: none;
+bottom: -2px;
+left: 50%;
+position: absolute;
+width: 0%;
+height: 2px;
+background-color: var(--main-color);
+transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+transition-duration: 400ms;
+transition-property: width, left;
+}
+
+
+/* ********* Contact Me ********* */
+
+.contact-form-container {
+    text-align: center;
+    padding: 160px 40px 4rem;
+}
+
+    /*  ******** Footer ********* */
+
+    .footer{
+        background-color: var(--bg-light-color);
+       margin-top: 10%;
+    }
+    
+    .footercontainer{
+        width: 100%;
+        padding: 75px;
+    }
+    
+    /* Get in touch */
+    .footer .get {
+      color: var(--para-color);
+      font-size: 40px;
+      position: relative;
+      top: 55px;
+      left: 100px;
+    }
+    
+    
+    /* Social icons */
+    .footer .socialicons {
+      text-align: center;
+      margin-top: 10px; 
+      position: relative; 
+      right: -10px; 
+      top: 10px;
+    
+    .footer .socialicons a {
+      font-size: 25px;
+      padding: 10px;
+      opacity: 1;
+    }
+    /* ********** Copyrights ********** */
+    
+    .footerbottom{
+      padding: 1px;
+      text-align: center;
+    }
+    
+    
+    .footerbottom p{
+      color: #f9f9f9;
+      font-size: 10px;
+    }
+    
+    .disigner{
+      opacity: 0.7;
+      text-decoration: uppercase;
+      font-weight: 700;
+      margin: 0px 5;
+    }
+    
+    
+
+
+/* ******* Custom Scrollbar ******** */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--para-color); 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 20px;
+    
+}
+
+::-webkit-scrollbar-track:hover {
+    background-color: var(--bg-color);
+}
+  
+}
+/*  ********* Loading ********** */
+
+
+.loader {
+    width: 100%;
+    height: 200vh;
+    position: absolute;
+    top: 50%;
+    background-color: #1e1e1e;
+    z-index: 100;
+    transform: translateY(-50%);
+}
+
+.iframe {
+    display: none;
+}
+
+.spinner {
+    width: 80px;
+    height: 80px;
+    border: 10px solid #45474b;
+    border-radius: 100%;
+    border-top: 10px solid var(--main-color);
+    animation: spin 1.4s linear infinite;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+}
+
+
+
+/* ********************************** 280px ****************************************** */
+
+@media (max-width: 280px) {
+
+
+    html,body{
+        width: 100%;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      
+      html{
+        scroll-behavior: smooth;
+      }
+
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 2.5rem ;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .logo {
+        font-size: 26px;
+        font-weight: 700;
+        color: var(--text-color);
+       position: absolute;
+       left: 40px;
+       top: 20px;
+    }
+
+
+    /* navigation inner text */
+    
+    .barnav li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: .8rem;
+        left: -180px;
+    }
+
+    nav ul{
+        background-color: rgba(213, 121, 255, 0.67);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        max-height: 150px;
+        width: 100%;
+        height: 0;
+        display: flex;
+        overflow: hidden;
+       
+    }
+
+    /* ******* Menu ******** */
+
+.menu-line {
+    height: 3px;
+    width: 20px;
+    background-color: var(--text-color);
+    margin-bottom: 3px;
+}
+
+.menu {
+    cursor: pointer;
+}
+
+    .menu {
+        display: block;
+        position: absolute;
+        right: 40px;
+        top: 30px;
+    }
+
+    .showmenu{
+        display:block;
+        height: 13.7rem;
+        transition: .5s ease;
+    }
+
+
+/******* Link Hover Effect ******* */
+
+nav a:hover:after {
+width: 100%;
+left: 0%;
+}
+
+nav a:after{
+content: "";
+pointer-events: none;
+bottom: -2px;
+left: 50%;
+position: absolute;
+width: 0%;
+height: 2px;
+background-color: var(--main-color);
+transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+transition-duration: 400ms;
+transition-property: width, left;
+}
+
+
+/* ********* Contact Me ********* */
+
+.contact-form-container {
+    text-align: center;
+    padding: 560px 40px 4rem;
+}
+
+/*  ******** Footer ********* */
+
+.footer{
+    background-color: var(--bg-light-color);
+   margin-top: 100%;
+}
+
+.footercontainer{
+    width: 100%;
+    padding: 35px;
+}
+
+/* ********** get in touch ********* */
+
+.footer .get{
+    color: var(--para-color);
+    font-size: 20px;
+    position: relative;
+    top: 20px;
+    left: 80px;
+}
+
+/* ************ Socials ************ */
+
+.footer .socialicons{
+    position: relative;
+    right: -45px;
+    top: 10px;
+}
+
+.socialicons a{
+    font-size: 10px;
+    text-decoration: none;
+    padding: 5px;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.socialicons a:hover{
+    background-color: var(--main-color);
+    border-radius: 100%;
+  }
+
+
+/* ********** Copyrights ********** */
+
+.footerbottom{
+    padding: 1px;
+    text-align: center;
+}
+
+
+.footerbottom p{
+    color: #f9f9f9;
+    font-size: 5px;
+}
+
+.disigner{
+    opacity: 0.7;
+    text-decoration: uppercase;
+    font-weight: 700;
+    margin: 0px 5;
+}
+
+
+
+/* ******* Custom Scrollbar ******** */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--para-color); 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 20px;
+    
+}
+
+::-webkit-scrollbar-track:hover {
+    background-color: var(--bg-color);
+}
+
+
+
+
+/*  ********* Loading ********** */
+
+
+.loader {
+    width: 100%;
+    height: 200vh;
+    position: absolute;
+    top: -400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    z-index: 100;
+    
+}
+
+.iframe {
+    display: none;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #45474b;
+    border-radius: 100%;
+    border-top: 5px solid var(--main-color);
+    animation: spin 1.4s linear infinite;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+  
+}
+

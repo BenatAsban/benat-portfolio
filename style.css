@@ -1,0 +1,3231 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+:root {
+  --bg-color: #1e1e1e;
+  --bg-light-color: #303036;
+  --text-color: #f9f9f9;
+  --para-color: #9c9c9c;
+  --main-color: #8f43ee;
+  --light-color: #b37df5;
+  --extra-light: #cea5ff;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+html,
+body {
+  width: 100%;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ******* Header *******/
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: .9rem 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-color);
+  z-index: 100;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-color);
+  text-decoration: none;
+  position: relative;
+  left: -280px;
+}
+
+nav {
+  font-size: 20px;
+  font-weight: 700;
+  width: 100%;
+}
+
+nav a {
+  color: var(--text-color);
+  position: relative;
+  right: -320px;
+}
+
+nav a:hover {
+  color: var(--main-color);
+}
+
+nav li {
+  display: inline-block;
+  margin: 20px;
+}
+
+/******* Link Hover Effect ******* */
+
+nav a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+nav a:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: var(--main-color);
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+/* ******* hero section ******* */
+
+.hero {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 2.5rem;
+}
+
+.content {
+  display: flex;
+  height: 40vh;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-main {
+  position: relative;
+  left: 60px;
+}
+
+.hero-text {
+  width: 100%;
+  margin-top: 13rem;
+}
+
+.hero-text h2 {
+  position: absolute;
+  left: 1px;
+  top: 160px;
+}
+
+.hero-text h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.hero-text h2 span {
+  color: #8f43ee;
+}
+
+/* ***************** text animation ******************* */
+
+.animated-text {
+  font-size: 40px;
+  font-weight: 700;
+  min-width: 280px;
+}
+
+.animated-text span {
+  position: relative;
+}
+
+.animated-text span::before {
+  content: "Softwere Developer";
+  color: var(--text-color);
+  animation: words 20s infinite;
+}
+
+.animated-text span::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: var(--bg-color);
+  border-left: 2px solid var(--text-color);
+  right: -8px;
+  animation: cursor 0.8s infinite, typing 20s steps(15) infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 2px solid #ff7f5000;
+  }
+}
+
+@keyframes words {
+  0%,
+  20% {
+    content: "Python Developer";
+  }
+  21%,
+  40% {
+    content: "Web Developer";
+  }
+  41%,
+  60% {
+    content: "Front End Developer";
+  }
+  61%,
+  80% {
+    content: "Full Stack Developer";
+  }
+  81%,
+  100% {
+    content: "Softwere Developer";
+  }
+}
+
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
+}
+
+.typed-cursor {
+  display: none;
+}
+
+.hero-text p {
+  color: var(--text-color);
+  font-weight: 500;
+  line-height: 1.3;
+  display: block;
+}
+
+.hero-text a {
+  background: var(--main-color);
+  box-shadow: 0 0 12px var(--main-color);
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--text-color);
+  cursor: pointer;
+  display: inline-block;
+  margin: 30px -1px;
+  border: 2px solid transparent;
+  transition: all 0.3s;
+}
+
+.hero-text a:hover {
+  background: transparent;
+  border: 2px solid var(--main-color);
+}
+
+.hero-image img {
+  margin-right: 90px;
+  margin-top: 170px;
+  width: 370px;
+  height: 370px;
+  background-position: 100%;
+  border: 3px solid white;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  box-shadow: 0 0 35px rgba(213, 121, 255, 0.67);
+  animation: ani123 8s ease-in-out infinite;
+}
+
+@keyframes ani123 {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+/* ******* Skill Logos ******* */
+
+.skills {
+  display: fixed;
+  align-items: center;
+  position: absolute;
+  bottom: -30%;
+  left: 0;
+  color: var(--para-color);
+}
+
+.skills p {
+  border-right: 2px solid var(--text-color);
+  color: var(--para-color);
+  font-family: "mulish", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 7rem;
+  padding-right: 2rem;
+}
+
+.skills ul {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+  list-style: none;
+  margin-top: 12px;
+}
+
+.skills ul li img {
+  width: 35px;
+  height: auto;
+  position: relative;
+  left: 180px;
+  top: -40px;
+}
+
+/*  ******** Footer ********* */
+
+.footer {
+  background-color: var(--bg-light-color);
+margin-top: 100px;
+}
+
+.footercontainer{
+  width: 100%;
+  padding: 75px;
+}
+
+/* ********** get in touch ********* */
+
+.footer .get {
+  color: var(--para-color);
+  font-size: 40px;
+  position: relative;
+  top: 120px;
+  left: 200px;
+}
+
+/* ************ Socials ************ */
+
+.footer .socialicons {
+  position: relative;
+  right: -800px;
+}
+
+.socialicons a {
+  font-size: 31px;
+  text-decoration: none;
+  padding: 10px;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.socialicons a:hover {
+  background-color: var(--main-color);
+  border-radius: 100%;
+}
+
+/* ********** Copyrights ********** */
+
+.footerbottom {
+  padding: 1px;
+  text-align: center;
+}
+
+.footerbottom p {
+  color: #f9f9f9;
+  font-size: 10px;
+}
+
+.disigner {
+  opacity: 0.7;
+  text-decoration: uppercase;
+  font-weight: 700;
+  margin: 0px 5;
+}
+
+/* ******* Custom Scrollbar ******** */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--para-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: var(--bg-color);
+}
+
+/*  ********* Loading ********** */
+
+.loader {
+  width: 100%;
+  height: 170vh;
+  position: fixed;
+  top: -250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e1e1e;
+  z-index: 100;
+}
+
+.iframe {
+  display: none;
+}
+
+.spinner {
+  width: 80px;
+  height: 80px;
+  border: 10px solid #45474b;
+  border-radius: 100%;
+  border-top: 10px solid var(--main-color);
+  animation: spin 1.4s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ******************************************** 1200px **************************************************  */
+
+@media (max-width: 1200px) {
+  html,body{
+    width: 100%;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  html{
+    scroll-behavior: smooth;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: .9rem 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    z-index: 100;
+  }
+
+  .logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+    left: -180px;
+  }
+
+  nav {
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+  }
+
+  nav a {
+    color: var(--text-color);
+    position: relative;
+    right: -250px;
+  }
+
+  nav a:hover {
+    color: var(--main-color);
+  }
+
+  nav li {
+    display: inline-block;
+    margin: 20px;
+  }
+
+  /******* Link Hover Effect ******* */
+
+  nav a:hover:after {
+    width: 100%;
+    left: 0;
+  }
+
+  nav a:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--main-color);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+
+  /* ******* hero section ******* */
+
+  .hero {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 2.5rem;
+  }
+
+  .content {
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .hero-main {
+    position: relative;
+    left: 60px;
+  }
+
+  .hero-text {
+    width: 100%;
+    margin-top: 13rem;
+  }
+
+  .hero-text h2 {
+    position: absolute;
+    left: 2px;
+    top: 160px;
+  }
+
+  .hero-text h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--main-color);
+  }
+
+  .hero-text h2 span {
+    color: #8f43ee;
+  }
+
+  .text {
+    display: inline;
+    border-right: 2px solid #8f43ee;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+  }
+
+  .typed-cursor {
+    display: none;
+  }
+
+  .hero-text p {
+    color: var(--text-color);
+    line-height: 1.3;
+    width: fit-content;
+  }
+
+  .hero-text a {
+    background: var(--main-color);
+    box-shadow: 0 0 12px var(--main-color);
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+    display: inline-block;
+    margin: 30px -1px;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+  }
+
+  .hero-text a:hover {
+    background: transparent;
+    border: 2px solid var(--main-color);
+  }
+
+  .hero-image img {
+    width: 470px;
+    height: 470px;
+    background-position: 100%;
+    border: 3px solid white;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    box-shadow: 0 0 35px rgba(213, 121, 255, 0.67);
+    animation: ani123 8s ease-in-out infinite;
+  }
+
+  @keyframes ani123 {
+    0% {
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+
+    50% {
+      border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+
+    100% {
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+  }
+
+  /* ******* Skill Logos ******* */
+
+  .skills {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: -40%;
+    left: 0;
+    color: var(--para-color);
+  }
+
+  .skills p {
+    width: 140px;
+    color: var(--para-color);
+    font-family: "mulish", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .skills ul {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+    list-style: none;
+    margin-top: 12px;
+  }
+
+  .skills ul li img {
+    width: 35px;
+    height: auto;
+    position: relative;
+    left: -50px;
+    top: 0px;
+  }
+
+
+/*  ******** Footer ********* */
+
+.footer{
+  background-color: var(--bg-light-color);
+ margin-top: 100px;
+}
+
+.footercontainer{
+  width: 100%;
+  padding: 75px;
+}
+
+/* ********** get in touch ********* */
+
+.footer .get{
+  color: var(--para-color);
+  font-size: 40px;
+  position: relative;
+  top: 115px;
+  left: 150px;
+}
+
+/* ************ Socials ************ */
+
+.footer .socialicons{
+  position: relative;
+  right: -700px;
+}
+
+.socialicons a{
+  font-size: 31px;
+  text-decoration: none;
+  padding: 10px;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.socialicons a:hover{
+  background-color: var(--main-color);
+  border-radius: 100%;
+}
+
+
+  /* ********** Copyrights ********** */
+
+  .footerbottom {
+    padding: 1px;
+    text-align: center;
+  }
+
+  .footerbottom p {
+    color: #f9f9f9;
+    font-size: 10px;
+  }
+
+  .disigner {
+    opacity: 0.7;
+    text-decoration: uppercase;
+    font-weight: 700;
+    margin: 0px 5;
+  } 
+
+  /* ******* Custom Scrollbar ******** */
+
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--para-color);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 20px;
+  }
+
+  ::-webkit-scrollbar-track:hover {
+    background-color: var(--bg-color);
+  }
+
+  /*  ********* Loading ********** */
+
+  .loader {
+    width: 100%;
+    height: 170vh;
+    position: absolute;
+    top: -600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    z-index: 100;
+  }
+
+  .iframe {
+    display: none;
+  }
+
+  .spinner {
+    width: 80px;
+    height: 80px;
+    border: 10px solid #45474b;
+    border-radius: 100%;
+    border-top: 10px solid var(--main-color);
+    animation: spin 1.4s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+/* ****************************** 1024px **************************** */
+
+@media (max-width: 1024px) {
+
+
+  html,body{
+    width: 100%;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: .9rem 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    z-index: 100;
+  }
+
+  .logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+    left: -160px;
+  }
+
+  nav {
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+  }
+
+  nav a {
+    color: var(--text-color);
+    position: relative;
+    right: -200px;
+  }
+
+  nav a:hover {
+    color: var(--main-color);
+  }
+
+  nav li {
+    display: inline-block;
+    margin: 20px;
+  }
+
+  /******* Link Hover Effect ******* */
+
+  nav a:hover:after {
+    width: 100%;
+    left: 0;
+  }
+
+  nav a:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--main-color);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+
+  /* ******* hero section ******* */
+
+  .hero {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 2.5rem;
+  }
+
+  .content {
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .hero-main {
+    position: relative;
+    left: 60px;
+  }
+
+  .hero-text {
+    width: 100%;
+    margin-top: 13rem;
+  }
+
+  .hero-text h2 {
+    position: absolute;
+    left: 0px;
+    top: 160px;
+  }
+
+  .hero-text h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--main-color);
+  }
+
+  .hero-text h2 span {
+    color: #8f43ee;
+  }
+
+  .typed-cursor {
+    display: none;
+  }
+
+  .hero-text p {
+    color: var(--text-color);
+    line-height: 1.3;
+    width: fit-content;
+  }
+
+  .hero-text a {
+    background: var(--main-color);
+    box-shadow: 0 0 12px var(--main-color);
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+    display: inline-block;
+    margin: 30px -1px;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+  }
+
+  .hero-text a:hover {
+    background: transparent;
+    border: 2px solid var(--main-color);
+  }
+
+  .hero-image img {
+    width: 370px;
+    height: 370px;
+    background-position: 100%;
+    border: 3px solid white;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    box-shadow: 0 0 35px rgba(213, 121, 255, 0.67);
+    animation: ani123 8s ease-in-out infinite;
+  }
+
+  @keyframes ani123 {
+    0% {
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+
+    50% {
+      border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+
+    100% {
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+  }
+
+  /* ******* Skill Logos ******* */
+
+  .skills {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: -40%;
+    left: 0;
+    color: var(--para-color);
+  }
+
+  .skills p {
+    border-right: 2px solid var(--text-color);
+    color: var(--para-color);
+    font-family: "mulish", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 6rem;
+    padding-right: 2rem;
+  }
+
+  .skills ul {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+    list-style: none;
+    margin-top: 12px;
+  }
+
+  .skills ul li img {
+    width: 35px;
+    height: auto;
+    cursor: pointer;
+  }
+
+
+/*  ******** Footer ********* */
+
+.footer{
+  background-color: var(--bg-light-color);
+ margin-top: 100px;
+}
+
+.footercontainer{
+  width: 100%;
+  padding: 75px;
+}
+
+/* ********** get in touch ********* */
+
+.footer .get{
+  color: var(--para-color);
+  font-size: 40px;
+  position: relative;
+  top: 125px;
+  left: 150px;
+}
+
+/* ************ Socials ************ */
+
+.footer .socialicons{
+  position: relative;
+  right: -550px;
+}
+
+.socialicons a{
+  font-size: 31px;
+  text-decoration: none;
+  padding: 10px;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.socialicons a:hover{
+  background-color: var(--main-color);
+  border-radius: 100%;
+}
+
+  /* ********** Copyrights ********** */
+
+  .footerbottom {
+    padding: 1px;
+    text-align: center;
+  }
+
+  .footerbottom p {
+    font-size: 10px;
+  }
+
+  .disigner {
+    color: #f9f9f9;
+    opacity: 0.7;
+    text-decoration: uppercase;
+    font-weight: 700;
+    margin: 0px 5;
+  }
+
+  /* ******* Custom Scrollbar ******** */
+
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--para-color);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 20px;
+  }
+
+  ::-webkit-scrollbar-track:hover {
+    background-color: var(--bg-color);
+  }
+
+  /*  ********* Loading ********** */
+
+  .loader {
+    width: 100%;
+    height: 170vh;
+    position: absolute;
+    top: -600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    z-index: 100;
+  }
+
+  .iframe {
+    display: none;
+  }
+
+  .spinner {
+    width: 80px;
+    height: 80px;
+    border: 10px solid #45474b;
+    border-radius: 100%;
+    border-top: 10px solid var(--main-color);
+    animation: spin 1.4s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+/* ****************************** 992px **************************** */
+
+@media (max-width: 992px) {
+
+
+  html,body{
+    width: 100%;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0.9rem 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    z-index: 100;
+  }
+
+  .logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+    left: -160px;
+  }
+
+  nav {
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+  }
+
+  nav a {
+    color: var(--text-color);
+    position: relative;
+    right: -180px;
+  }
+
+  nav a:hover {
+    color: var(--main-color);
+  }
+
+  nav li {
+    display: inline-block;
+    margin: 20px;
+  }
+
+  /******* Link Hover Effect ******* */
+
+  nav a:hover:after {
+    width: 100%;
+    left: 0;
+  }
+
+  nav a:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--main-color);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+
+  /* ******* hero section ******* */
+
+  .hero {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 2.5rem;
+  }
+
+  .content {
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .hero-main {
+    position: relative;
+    left: 60px;
+  }
+
+  .hero-text {
+    width: 100%;
+    margin-top: 13rem;
+  }
+
+  .hero-text h2 {
+    position: absolute;
+    left: -2px;
+    top: 160px;
+  }
+
+  .hero-text h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--main-color);
+  }
+
+  .hero-text h2 span {
+    color: #8f43ee;
+  }
+
+  .typed-cursor {
+    display: none;
+  }
+
+  .hero-text p {
+    color: var(--text-color);
+    line-height: 1.3;
+    width: fit-content;
+  }
+
+  .hero-text a {
+    background: var(--main-color);
+    box-shadow: 0 0 12px var(--main-color);
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+    display: inline-block;
+    margin: 30px -1px;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+  }
+
+  .hero-text a:hover {
+    background: transparent;
+    border: 2px solid var(--main-color);
+  }
+
+  .hero-image img {
+    width: 370px;
+    height: 370px;
+    background-position: 100%;
+    border: 3px solid white;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    box-shadow: 0 0 35px rgba(213, 121, 255, 0.67);
+    animation: ani123 8s ease-in-out infinite;
+  }
+
+  @keyframes ani123 {
+    0% {
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+
+    50% {
+      border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+
+    100% {
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+  }
+
+  /* ******* Skill Logos ******* */
+
+  .skills {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: -40%;
+    left: 0;
+    color: var(--para-color);
+  }
+
+  .skills p {
+    border-right: 2px solid var(--text-color);
+    color: var(--para-color);
+    font-family: "mulish", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 6rem;
+    padding-right: 2rem;
+  }
+
+  .skills ul {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+    list-style: none;
+    margin-top: 12px;
+  }
+
+  .skills ul li img {
+    width: 35px;
+    height: auto;
+    cursor: pointer;
+  }
+
+/*  ******** Footer ********* */
+
+.footer{
+  background-color: var(--bg-light-color);
+ margin-top: 100px;
+}
+
+.footercontainer{
+  width: 100%;
+  padding: 75px;
+}
+
+/* ********** get in touch ********* */
+
+.footer .get{
+  color: var(--para-color);
+  font-size: 40px;
+  position: relative;
+  top: 90px;
+  left: 150px;
+}
+
+/* ************ Socials ************ */
+
+.footer .socialicons{
+  position: relative;
+  right: -550px;
+  top: -35px;
+}
+
+.socialicons a{
+  font-size: 31px;
+  text-decoration: none;
+  padding: 10px;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.socialicons a:hover{
+  background-color: var(--main-color);
+  border-radius: 100%;
+}
+
+
+
+  /* ********** Copyrights ********** */
+
+  .footerbottom {
+    padding: 1px;
+    text-align: center;
+  }
+
+  .footerbottom p {
+    font-size: 10px;
+  }
+
+  .disigner {
+    color: #f9f9f9;
+    opacity: 0.7;
+    text-decoration: uppercase;
+    font-weight: 700;
+    margin: 0px 5;
+  }
+
+  /* ******* Custom Scrollbar ******** */
+
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--para-color);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 20px;
+  }
+
+  ::-webkit-scrollbar-track:hover {
+    background-color: var(--bg-color);
+  }
+
+  /*  ********* Loading ********** */
+
+  .loader {
+    width: 100%;
+    height: 170vh;
+    position: absolute;
+    top: -600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    z-index: 99999999;
+  }
+
+  .iframe {
+    display: none;
+  }
+
+  .spinner {
+    width: 80px;
+    height: 80px;
+    border: 10px solid #45474b;
+    border-radius: 100%;
+    border-top: 10px solid var(--main-color);
+    animation: spin 1.4s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+/* ************************************** 768px ********************************* */
+
+@media (max-width: 768px) {
+
+
+  html,body{
+    width: 100%;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-color);
+    position: absolute;
+    left: 40px;
+    top: 30px;
+  }
+
+  /* ******* hero section ******* */
+
+  .hero {
+    height: auto;
+    padding-top: 5rem;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 3rem;
+    height: auto;
+    text-align: center;
+  }
+
+  .hero-main {
+    flex-direction: column-reverse;
+    gap: 3rem;
+    height: auto;
+    text-align: center;
+  }
+
+  .hero-text {
+    width: 100%;
+    margin-top: 15rem;
+  }
+
+  .hero-text h2 {
+    width: 215px;
+  }
+
+  /* ****** I'm Benat Asban */
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 300px;
+    position: relative;
+    left: 180px;
+    top: 400px;
+    color: var(--main-color);
+  }
+
+  .h2 span {
+    color: #8f43ee;
+  }
+
+  /* ***************** text animation ******************* */
+
+  .animated-text {
+    font-size: 40px;
+    font-weight: 700;
+    min-width: 280px;
+    position: relative;
+    top: 400px;
+    left: 60px;
+  }
+
+  .animated-text span {
+    position: relative;
+  }
+
+  .animated-text span::before {
+    content: "Youtuber";
+    color: var(--text-color);
+    animation: words 20s infinite;
+  }
+
+  .animated-text span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: var(--bg-color);
+    border-left: 2px solid var(--text-color);
+    right: -8px;
+    animation: cursor 0.8s infinite, typing 20s steps(15) infinite;
+  }
+
+  @keyframes cursor {
+    to {
+      border-left: 2px solid #ff7f5000;
+    }
+  }
+
+  @keyframes words {
+    0%,
+    20% {
+      content: "Python Developer";
+    }
+    21%,
+    40% {
+      content: "Web Developer";
+    }
+    41%,
+    60% {
+      content: "Full Stack Developer";
+    }
+    61%,
+    80% {
+      content: "Front End Developer";
+    }
+    81%,
+    100% {
+      content: "Softwere Developer";
+    }
+  }
+
+  @keyframes typing {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+      width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+      width: calc(100% + 8px);
+    }
+  }
+
+  .typed-cursor {
+    display: none;
+  }
+
+  .hero-text p {
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 20px;
+    position: relative;
+    left: 40px;
+    top: 400px;
+  }
+
+  .hero-text a {
+    box-shadow: 0 0 12px var(--main-color);
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+    display: inline-block;
+    margin: 30px 50px;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+  }
+
+  /* *****download cv position ******** */
+  .hero-text a {
+    position: relative;
+    top: 400px;
+    left: 50px;
+  }
+
+  .hero-text a:hover {
+    background: transparent;
+    border: 2px solid var(--main-color);
+  }
+
+  /* ******* image ****** */
+
+  .hero-image img {
+    margin-top: -370px;
+    margin-left: 200px;
+    width: 370px;
+    height: 370px;
+    background-position: 100%;
+    border: 3px solid white;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    box-shadow: 0 0 35px rgba(213, 121, 255, 0.67);
+    animation: ani123 8s ease-in-out infinite;
+  }
+
+  @keyframes ani123 {
+    0% {
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+
+    50% {
+      border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+
+    100% {
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+  }
+
+  /* ******* Skill Logos ******* */
+
+  .skills {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 160px;
+    top: 200%;
+    color: var(--para-color);
+  }
+
+  .skills p {
+    border-right: 1px solid var(--text-color);
+    color: var(--para-color);
+    font-family: "mulish", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    width: 140px;
+    position: relative;
+    left: -50px;
+  }
+
+  .skills ul {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+    margin-top: 5px;
+  }
+
+  .skills ul li img {
+    margin-inline: 15px;
+    position: relative;
+    left: 130px;
+    top: -13px;
+  }
+
+  .skills ul li {
+    position: relative;
+    left: -250px;
+    bottom: -15px;
+  }
+
+  /* navigation inner text */
+
+  nav a {
+    color: var(--text-color);
+  }
+
+  nav li {
+    display: block;
+    text-align: center;
+    margin: 1.3rem 0;
+    margin-left: -250px;
+  }
+  /* ********down navbar****** */
+  nav ul {
+    background-color: rgba(213, 121, 255, 0.67);
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .logo {
+    align-self: flex-start;
+    margin: 20px 0px 0px -20px;
+  }
+
+  /* ******* Menu ******** */
+
+  .menu-line {
+    height: 3px;
+    width: 20px;
+    background-color: var(--text-color);
+    margin-bottom: 3px;
+  }
+
+  .menu {
+    cursor: pointer;
+  }
+
+  .menu {
+    display: block;
+    position: absolute;
+    right: 40px;
+    top: 33px;
+  }
+
+  .showmenu {
+    display: inline-block;
+    height: 13.7rem;
+    overflow: hidden;
+    transition: 0.5s ease;
+  }
+
+/*  ******** Footer ********* */
+
+.footer{
+  background-color: var(--bg-light-color);
+ margin-top: 70%;
+}
+
+.footercontainer{
+  width: 100%;
+  padding: 75px;
+}
+
+/* ********** get in touch ********* */
+
+.footer .get{
+  color: var(--para-color);
+  font-size: 40px;
+  position: relative;
+  top: 110px;
+  left: 80px;
+}
+
+/* ************ Socials ************ */
+
+.footer .socialicons{
+  position: relative;
+  right: -400px;
+  top: -10px;
+}
+
+.socialicons a{
+  font-size: 25px;
+  text-decoration: none;
+  padding: 10px;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.socialicons a:hover{
+  background-color: var(--main-color);
+  border-radius: 100%;
+}
+
+
+  /* ********** Copyrights ********** */
+
+  .footerbottom {
+    padding: 1px;
+    text-align: center;
+  }
+
+  .footerbottom p {
+    color: #f9f9f9;
+    font-size: 10px;
+  }
+
+  .disigner {
+    opacity: 0.7;
+    text-decoration: uppercase;
+    font-weight: 700;
+    margin: 0px 5;
+  }
+
+  /* ******* Custom Scrollbar ******** */
+
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--para-color);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 20px;
+  }
+
+  ::-webkit-scrollbar-track:hover {
+    background-color: var(--bg-color);
+  }
+
+  /*  ********* Loading ********** */
+
+  .loader {
+    width: 100%;
+    height: 200vh;
+    position: absolute;
+    top: -400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    z-index: 100;
+  }
+
+  .iframe {
+    display: none;
+  }
+
+  .spinner {
+    width: 80px;
+    height: 80px;
+    border: 10px solid #45474b;
+    border-radius: 100%;
+    border-top: 10px solid var(--main-color);
+    animation: spin 1.4s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+/* *********************** 600px ********************* */
+
+@media (max-width: 600px) {
+
+
+ html,body{
+    width: 100%;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+   html{
+    scroll-behavior: smooth;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-color);
+    position: absolute;
+    left: 40px;
+    top: 30px;
+  }
+
+  /* ******* hero section ******* */
+
+  .hero {
+    height: auto;
+    padding-top: 5rem;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 3rem;
+    height: auto;
+    text-align: center;
+  }
+
+  .hero-main {
+    flex-direction: column-reverse;
+    gap: 3rem;
+    height: auto;
+    text-align: center;
+  }
+
+  .hero-text {
+    width: 100%;
+    margin-top: 13rem;
+  }
+
+  .hero-text h2 {
+    width: 215px;
+  }
+
+  /* ****** I'm Benat Asban */
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 300px;
+    position: relative;
+    left: 100px;
+    top: 400px;
+    color: var(--main-color);
+  }
+
+  .h2 span {
+    color: #8f43ee;
+  }
+
+  /* ***************** text animation ******************* */
+
+  .animated-text {
+    font-size: 40px;
+    font-weight: 700;
+    min-width: 280px;
+    position: relative;
+    top: 400px;
+    left: 20px;
+  }
+
+  .animated-text span {
+    position: relative;
+  }
+
+  .animated-text span::before {
+    content: "Youtuber";
+    color: var(--text-color);
+    animation: words 20s infinite;
+  }
+
+  .animated-text span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: var(--bg-color);
+    border-left: 2px solid var(--text-color);
+    right: -8px;
+    animation: cursor 0.8s infinite, typing 20s steps(15) infinite;
+  }
+
+  @keyframes cursor {
+    to {
+      border-left: 2px solid #ff7f5000;
+    }
+  }
+
+  @keyframes words {
+    0%,
+    20% {
+      content: "Python Developer";
+    }
+    21%,
+    40% {
+      content: "Web Developer";
+    }
+    41%,
+    60% {
+      content: "Front End Developer";
+    }
+    61%,
+    80% {
+      content: "Full Stack Developer";
+    }
+    81%,
+    100% {
+      content: "Softwere Developer";
+    }
+  }
+
+  @keyframes typing {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+      width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+      width: calc(100% + 8px);
+    }
+  }
+
+  .typed-cursor {
+    display: none;
+  }
+
+  .hero-text p {
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 20px;
+    position: relative;
+    left: 20px;
+    top: 400px;
+  }
+
+  .hero-text a {
+    box-shadow: 0 0 12px var(--main-color);
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+    display: inline-block;
+    margin: 30px 50px;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+  }
+
+  /* *****download cv position ******** */
+  .hero-text a {
+    position: relative;
+    top: 400px;
+    left: 20px;
+  }
+
+  .hero-text a:hover {
+    background: transparent;
+    border: 2px solid var(--main-color);
+  }
+
+  /* ******* image ****** */
+
+  .hero-image img {
+    margin-top: -370px;
+    margin-left: 120px;
+    width: 370px;
+    height: 370px;
+    background-position: 100%;
+    border: 3px solid white;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    box-shadow: 0 0 35px rgba(213, 121, 255, 0.67);
+    animation: ani123 8s ease-in-out infinite;
+  }
+
+  @keyframes ani123 {
+    0% {
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+
+    50% {
+      border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+
+    100% {
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+  }
+
+  /* ******* Skill Logos ******* */
+
+  .skills {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 100px;
+    top: 200%;
+    color: var(--para-color);
+  }
+
+  .skills p {
+    border-right: 1px solid var(--text-color);
+    color: var(--para-color);
+    font-family: "mulish", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    width: 140px;
+    position: relative;
+    left: -100px;
+  }
+
+  .skills ul {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+    margin-top: 5px;
+  }
+
+  .skills ul li img {
+    margin-inline: 15px;
+    position: relative;
+    right: -100px;
+    top: -18px;
+  }
+
+  .skills ul li {
+    position: relative;
+    left: -300px;
+    bottom: -20px;
+  }
+
+  /* navigation bar */
+
+  nav {
+    flex-direction: column;
+  }
+
+  .barnav li {
+    display: block;
+    text-align: center;
+    margin: 1.3rem 0;
+    margin-left: -300px;
+  }
+
+  nav ul {
+    background-color: rgba(213, 121, 255, 0.67);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    display: flex;
+  }
+
+  .logo {
+    align-self: flex-start;
+    margin: 20px 0px 0px -20px;
+  }
+
+  /* ******* Menu ******** */
+
+  .menu-line {
+    height: 3px;
+    width: 20px;
+    background-color: var(--text-color);
+    margin-bottom: 3px;
+  }
+
+  .menu {
+    cursor: pointer;
+  }
+
+  .menu {
+    display: block;
+    position: absolute;
+    right: 40px;
+    top: 33px;
+  }
+
+  .showmenu {
+    display: inline-block;
+    height: 13.7rem;
+    overflow: hidden;
+    transition: 0.5s ease;
+  }
+
+/*  ******** Footer ********* */
+
+.footer{
+  background-color: var(--bg-light-color);
+ margin-top: auto;
+}
+
+.footercontainer{
+  width: 100%;
+  padding: 75px;
+}
+
+/* ********** get in touch ********* */
+
+.footer .get{
+  color: var(--para-color);
+  font-size: 40px;
+  position: relative;
+  top: 55px;
+  left: 190px;
+}
+
+/* ************ Socials ************ */
+
+.footer .socialicons{
+  position: relative;
+  right: -110px;
+  top: 30px;
+}
+
+.socialicons a{
+  font-size: 26px;
+  text-decoration: none;
+  padding: 10px;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.socialicons a:hover{
+  background-color: var(--main-color);
+  border-radius: 100%;
+}
+
+
+
+  /* ********** Copyrights ********** */
+
+  .footerbottom {
+    padding: 1px;
+    text-align: center;
+  }
+
+  .footerbottom p {
+    color: #f9f9f9;
+    font-size: 10px;
+  }
+
+  .disigner {
+    opacity: 0.7;
+    text-decoration: uppercase;
+    font-weight: 700;
+    margin: 0px 5;
+  }
+
+  /* ******* Custom Scrollbar ******** */
+
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--para-color);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 20px;
+  }
+
+  ::-webkit-scrollbar-track:hover {
+    background-color: var(--bg-color);
+  }
+
+  /*  ********* Loading ********** */
+
+  .loader {
+    width: 100%;
+    height: 200vh;
+    position: absolute;
+    top: -400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    z-index: 100;
+  }
+
+  .iframe {
+    display: none;
+  }
+
+  .spinner {
+    width: 80px;
+    height: 80px;
+    border: 10px solid #45474b;
+    border-radius: 100%;
+    border-top: 10px solid var(--main-color);
+    animation: spin 1.4s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+/* *********************** 430px ********************* */
+@media (max-width: 430px) {
+
+
+  html,body{
+    width: 100%;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+   html{
+    scroll-behavior: smooth;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-color);
+    position: absolute;
+    left: 40px;
+    top: 0;
+  }
+
+  /* ******* hero section ******* */
+
+  .hero {
+    height: auto;
+    padding-top: 5rem;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 3rem;
+    height: auto;
+    text-align: center;
+  }
+
+  .hero-main {
+    flex-direction: column-reverse;
+    gap: 3rem;
+    height: auto;
+    text-align: center;
+  }
+
+  .hero-text {
+    width: 100%;
+    margin-top: 13rem;
+  }
+
+  .hero-text h2 {
+    width: 215px;
+  }
+
+  /* ****** I'm Benat Asban */
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 300px;
+    position: relative;
+    left: 10px;
+    top: 400px;
+    color: var(--main-color);
+  }
+
+  .h2 span {
+    color: #8f43ee;
+  }
+
+  /* ***************** text animation ******************* */
+
+  .animated-text {
+    font-size: 30px;
+    font-weight: 700;
+    min-width: 280px;
+    position: relative;
+    top: 400px;
+    left: -20px;
+  }
+
+  .animated-text span {
+    position: relative;
+  }
+
+  .animated-text span::before {
+    content: "Youtuber";
+    color: var(--text-color);
+    animation: words 20s infinite;
+  }
+
+  .animated-text span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: var(--bg-color);
+    border-left: 2px solid var(--text-color);
+    right: -8px;
+    animation: cursor 0.8s infinite, typing 20s steps(15) infinite;
+  }
+
+  @keyframes cursor {
+    to {
+      border-left: 2px solid #ff7f5000;
+    }
+  }
+
+  @keyframes words {
+    0%,
+    20% {
+      content: "Python Developer";
+    }
+    21%,
+    40% {
+      content: "Web Developer";
+    }
+    41%,
+    60% {
+      content: "Front End Developer";
+    }
+    61%,
+    80% {
+      content: "Full Stack Developer";
+    }
+    81%,
+    100% {
+      content: "Softwere Developer";
+    }
+  }
+
+  @keyframes typing {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+      width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+      width: calc(100% + 8px);
+    }
+  }
+
+  .typed-cursor {
+    display: none;
+  }
+
+  .hero-text p {
+    color: var(--text-color);
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 20px;
+    position: relative;
+    left: -30px;
+    top: 400px;
+  }
+
+  .hero-text a {
+    box-shadow: 0 0 12px var(--main-color);
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+    display: inline-block;
+    margin: 30px 50px;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+  }
+
+  /* *****download cv position ******** */
+  .hero-text a {
+    position: relative;
+    top: 400px;
+    left: -30px;
+  }
+
+  .hero-text a:hover {
+    background: transparent;
+    border: 2px solid var(--main-color);
+  }
+
+  /* ******* image ****** */
+
+  .hero-image img {
+    margin-top: -370px;
+    margin-left: 70px;
+    width: 290px;
+    height: 290px;
+    background-position: 100%;
+    border: 3px solid white;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    box-shadow: 0 0 35px rgba(213, 121, 255, 0.67);
+    animation: ani123 8s ease-in-out infinite;
+  }
+
+  @keyframes ani123 {
+    0% {
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+
+    50% {
+      border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+
+    100% {
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+  }
+
+  /* ******* Skill Logos ******* */
+
+  .skills {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 70px;
+    top: 200%;
+    color: var(--para-color);
+  }
+
+  .skills p {
+    border-right: 1px solid var(--text-color);
+    color: var(--para-color);
+    font-family: "mulish", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    width: 140px;
+    position: relative;
+    left: -100px;
+  }
+
+  .skills ul {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    margin-top: 5px;
+  }
+
+  .skills ul li img {
+    margin-inline: 15px;
+    position: relative;
+    right: -100px;
+    top: -18px;
+  }
+
+  .skills ul li {
+    position: relative;
+    left: -300px;
+    bottom: -20px;
+  }
+
+  /* navigation bar */
+
+  nav {
+    flex-direction: column;
+  }
+
+  .barnav li {
+    display: block;
+    text-align: center;
+    margin: 1.3rem 0;
+    margin-left: -350px;
+  }
+
+  nav ul {
+    background-color: rgba(213, 121, 255, 0.67);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    display: flex;
+  }
+
+  .logo {
+    align-self: flex-start;
+    margin: 20px 0px 0px -20px;
+  }
+
+  /* ******* Menu ******** */
+
+  .menu-line {
+    height: 3px;
+    width: 20px;
+    background-color: var(--text-color);
+    margin-bottom: 3px;
+  }
+
+  .menu {
+    cursor: pointer;
+  }
+
+  .menu {
+    display: block;
+    position: absolute;
+    right: 40px;
+    top: 33px;
+  }
+
+  .showmenu {
+    display: inline-block;
+    height: 13.7rem;
+    overflow: hidden;
+    transition: 0.5s ease;
+  }
+
+
+  /* ******* Custom Scrollbar ******** */
+
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--para-color);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 20px;
+  }
+
+  ::-webkit-scrollbar-track:hover {
+    background-color: var(--bg-color);
+  }
+
+  /*  ********* Loading ********** */
+
+  .loader {
+    width: 100%;
+    height: 200vh;
+    position: absolute;
+    top: -400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    z-index: 100;
+  }
+
+  .iframe {
+    display: none;
+  }
+
+  .spinner {
+    width: 80px;
+    height: 80px;
+    border: 10px solid #45474b;
+    border-radius: 100%;
+    border-top: 10px solid var(--main-color);
+    animation: spin 1.4s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+    /*  ******** Footer ********* */
+
+    .footer{
+      background-color: var(--bg-light-color);
+     margin-top: 100%;
+  }
+  
+  .footercontainer{
+      width: 100%;
+      padding: 75px;
+  }
+  
+  /* Get in touch */
+  .footer .get {
+    color: var(--para-color);
+    font-size: 40px;
+    position: relative;
+    top: 55px;
+    left: 100px;
+  }
+  
+  
+  /* Social icons */
+  .footer .socialicons {
+    text-align: center;
+    margin-top: 10px; 
+    position: relative; 
+    right: -10px; 
+    top: 10px;
+  }
+  
+  .footer .socialicons a {
+    font-size: 25px;
+    padding: 10px;
+    opacity: 1;
+  }
+  /* ********** Copyrights ********** */
+  
+  .footerbottom{
+    padding: 1px;
+    text-align: center;
+  }
+  
+  
+  .footerbottom p{
+    color: #f9f9f9;
+    font-size: 10px;
+  }
+  
+  .disigner{
+    opacity: 0.7;
+    text-decoration: uppercase;
+    font-weight: 700;
+    margin: 0px 5;
+  }
+  
+}
+
+/* *********************** 280px ********************* */
+
+@media (max-width: 280px) {
+  html,
+  body {
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .header {
+    background-color: var(--bg-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .logo {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-color);
+    position: absolute;
+    left: 30px;
+    top: -14px;
+  }
+
+  /* ******* hero section ******* */
+
+  .hero {
+    height: auto;
+    padding-top: 5rem;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 3rem;
+    height: auto;
+    text-align: center;
+  }
+
+  .hero-main {
+    flex-direction: column-reverse;
+    gap: 3rem;
+    height: auto;
+    text-align: center;
+  }
+
+  .hero-text {
+    width: 100%;
+    margin-top: 10rem;
+  }
+
+  .hero-text {
+    position: relative;
+    top: -280px;
+  }
+
+  .hero-text h2 {
+    width: 215px;
+  }
+
+  /* ****** I'm Benat Asban */
+
+  .hero-text h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    width: 300px;
+    position: relative;
+    left: -70px;
+    top: 400px;
+    color: var(--main-color);
+  }
+
+  .h2 span {
+    color: #8f43ee;
+  }
+
+  /* ***************** text animation ******************* */
+
+  .animated-text {
+    font-size: 20px;
+    font-weight: 700;
+    min-width: 280px;
+    position: relative;
+    top: 400px;
+    left: -70px;
+  }
+
+  .animated-text span {
+    position: relative;
+  }
+
+  .animated-text span::before {
+    content: "Youtuber";
+    color: var(--text-color);
+    animation: words 20s infinite;
+  }
+
+  .animated-text span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: var(--bg-color);
+    border-left: 2px solid var(--text-color);
+    right: -8px;
+    animation: cursor 0.8s infinite, typing 20s steps(15) infinite;
+  }
+
+  @keyframes cursor {
+    to {
+      border-left: 2px solid #ff7f5000;
+    }
+  }
+
+  @keyframes words {
+    0%,
+    20% {
+      content: "Softwere Developer";
+    }
+    21%,
+    40% {
+      content: "Web Developer";
+    }
+    41%,
+    60% {
+      content: "Full Stack Developer";
+    }
+    61%,
+    80% {
+      content: "MERN Stack Developer";
+    }
+    81%,
+    100% {
+      content: "Softwere Developer";
+    }
+  }
+
+  @keyframes typing {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+      width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+      width: calc(100% + 8px);
+    }
+  }
+
+  .typed-cursor {
+    display: none;
+  }
+
+  .hero-text p {
+    color: var(--text-color);
+    font-size: 9px;
+    font-weight: 500;
+    max-width: 360px;
+    text-align: center;
+    line-height: 15px;
+    position: relative;
+    left: -35px;
+    top: 400px;
+  }
+
+  .hero-text a {
+    box-shadow: 0 0 12px var(--main-color);
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+    display: inline-block;
+    margin: 30px 50px;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+  }
+
+  /* *****download cv position ******** */
+  .hero-text a {
+    font-size: 9px;
+    position: relative;
+    top: 400px;
+    left: -70px;
+  }
+
+  .hero-text a:hover {
+    background: transparent;
+    border: 2px solid var(--main-color);
+  }
+
+  /* ******* image ****** */
+
+  .hero-image img {
+    position: relative;
+    top: -200px;
+    left: -70px;
+    width: 170px;
+    height: 170px;
+    background-position: 100%;
+    border: 3px solid white;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    box-shadow: 0 0 35px rgba(213, 121, 255, 0.67);
+    animation: ani123 8s ease-in-out infinite;
+  }
+
+  @keyframes ani123 {
+    0% {
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+
+    50% {
+      border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+
+    100% {
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+  }
+
+  /* ******* Skill Logos ******* */
+
+  .skills p {
+    color: var(--para-color);
+    font-family: "mulish", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    width: 60px;
+    position: relative;
+    left: -150px;
+    top: -50px;
+  }
+
+  .skills ul li {
+    position: relative;
+    left: -380px;
+    bottom: 30px;
+  }
+
+  .skills ul img {
+    font-size: 1px;
+  }
+
+  /* navigation bar */
+
+  nav {
+    flex-direction: column;
+  }
+
+  .barnav li {
+    display: block;
+    font-size: 10px;
+    text-align: center;
+    margin: 0.7rem 0;
+    margin-left: -300px;
+  }
+
+  nav ul {
+    background-color: rgba(213, 121, 255, 0.67);
+    position: absolute;
+    top: 100%;
+    max-height: 100px;
+    width: 100%;
+    height: 0;
+    display: flex;
+  }
+
+  .logo {
+    align-self: flex-start;
+    margin: 20px 0px 0px -20px;
+  }
+
+  /* ******* Menu ******** */
+
+  .menu-line {
+    height: 2px;
+    width: 15px;
+    background-color: var(--text-color);
+    margin-bottom: 3px;
+  }
+
+  .menu {
+    cursor: pointer;
+  }
+
+  .menu {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+
+  .showmenu {
+    display: inline-block;
+    height: 13.7rem;
+    overflow: hidden;
+    transition: 0.5s ease;
+  }
+
+  /*  ******** Footer ********* */
+
+  .footer {
+    background-color: var(--bg-light-color);
+    margin-top: 100%;
+  }
+
+  .footercontainer {
+    width: 100%;
+    padding: 35px;
+  }
+
+  /* ********** get in touch ********* */
+
+  .footer .get {
+    color: var(--para-color);
+    font-size: 20px;
+    position: relative;
+    top: 20px;
+    left: 80px;
+  }
+
+  /* ************ Socials ************ */
+
+  .footer .socialicons {
+    position: relative;
+    right: -45px;
+    top: 10px;
+  }
+
+  .socialicons a {
+    font-size: 10px;
+    text-decoration: none;
+    padding: 5px;
+    color: var(--text-color);
+    opacity: 0.9;
+  }
+
+  .socialicons a:hover {
+    background-color: var(--main-color);
+    border-radius: 100%;
+  }
+
+  /* ********** Copyrights ********** */
+
+  .footerbottom {
+    padding: 1px;
+    text-align: center;
+  }
+
+  .footerbottom p {
+    color: #f9f9f9;
+    font-size: 5px;
+  }
+
+  .disigner {
+    opacity: 0.7;
+    text-decoration: uppercase;
+    font-weight: 700;
+    margin: 0px 5;
+  }
+
+  /* ******* Custom Scrollbar ******** */
+
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--para-color);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 20px;
+  }
+
+  ::-webkit-scrollbar-track:hover {
+    background-color: var(--bg-color);
+  }
+
+  /*  ********* Loading ********** */
+
+  .loader {
+    width: 100%;
+    height: 200vh;
+    position: absolute;
+    top: -400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    z-index: 100;
+  }
+
+  .iframe {
+    display: none;
+  }
+
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #45474b;
+    border-radius: 100%;
+    border-top: 5px solid var(--main-color);
+    animation: spin 1.4s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

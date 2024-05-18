@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO WEBSITE</title>
+    <link rel="stylesheet" href="Contact.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg==" crossorigin="anonymous"></script>
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+
+<body>
+
+    <!-- ******* -->
+            <nav>
+                <div class="header">
+            <div class="logo">Contact</div>
+            <div class="barnav">
+                <ul> 
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="About Me.html">About Me</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+                </div>
+                <div class="menu">
+                    <div class="menu-line"></div>
+                    <div class="menu-line"></div>
+                    <div class="menu-line"></div>
+                </div>
+            </nav>
+        </div>
+
+
+        <!-- ********** Contact ********* -->
+
+        <div class="contact-form-container">
+            <div class="heading">Contact <span>Me</span></div>
+
+            <FORm action=""><div>
+                <input type="text" id="name" placeholder="Your Name" size="30" required>
+
+                <input type="email" id="email" placeholder="Email Address" size="30" required>
+
+                <input type="text" id="contact" placeholder="Enter Your Number" size="30" required>
+
+                <textarea id="message" placeholder="Message" style="height: 200px;"></textarea>
+
+                <button type="button" class="btn" onclick="Send()">Send</button>
+            </FORm>
+        </div>
+        </div>
+
+      
+        <!--  *********** Footer *********** -->
+
+        <footer>
+            <div class="footer">
+                <div class="get">Get In Touch</div>
+                <div class="footercontainer">
+                    <div class="socialicons">
+                        <a href="mailto:benatasban@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://gitlab.com/BenatAsban" target="_blank"><i class="fa-brands fa-gitlab"></i></a>
+                        <a href="https://www.linkedin.com/in/benat-asban-1177b6303/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/BenatAsban" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="tel:8428351029" target="_blank"><i class="fa-solid fa-phone"></i></a>
+                    </div>
+    
+                    
+    
+                </div>
+            </div>
+
+            <div class="footerbottom">
+                <p>Copyright &copy;2023; Desiged by <span class="disigner">Benat</span></p>
+            </div>
+
+
+        </footer>
+
+        <!--  *********** Loading ********* -->
+
+        <div class="loader">
+            <span class="spinner"></span>
+        </div>
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+
+    </body>
+
+<script>
+    const menu = document.querySelector('.menu')
+    const menuList = document.querySelector('nav ul')
+    menu.addEventListener('click',()=>{
+        menuList.classList.toggle('showmenu')
+    })
+    </script>
+
+
+<script>
+
+    const load = document.querySelector(".loader");
+
+    window.addEventListener("load", function(){
+        load.style.display = "none" 
+    });
+</script>
+
+
+<script>
+
+    /*===== SCROLL REVEAL ANIMATION =====*/
+    const sr = ScrollReveal({
+        reset: true,
+    });
+     
+    sr.reveal('.heading',{delay: 200, distance: '60px',duration: 2000,origin: 'top',}); 
+    sr.reveal('.contact-form-container',{delay: 200, distance: '60px',duration: 2000,origin: 'top',}); 
+    
+    sr.reveal('.get',{delay: 200, distance: '60px',duration: 2000,origin: 'left',}); 
+    sr.reveal('.socialicons',{ delay: 200,distance: '60px',duration: 2000,origin: 'right',});
+    
+    
+    </script>
+
+
+
+
+<script src="https://smtpjs.com/v3/smtp.js">
+
+</script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script>
+
+
+    function Send() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var contact = document.getElementById("contact").value;
+        var message = document.getElementById("message").value;
+
+
+        var body = "Name: " + name + "<br/> Email:" + email + "<br/> Contact:" + contact + "<br/> Message:" + message;
+
+        Email.send({
+        SecureToken : "6dd217ee-d99d-450e-8c09-306f1ec63013",
+        To : 'benatasban@gmail.com',
+        From : "benatasban@gmail.com",
+        Subject : "Message From Your Portfolio",
+         Body : body
+        }).then(
+            message => {
+                if(message=='OK'){
+                    swal({
+                       position: 'top-end',
+                       icon: 'success',
+                       title: 'Sent successfully',
+                       showConfirmButton: false,
+                       timer: 500
+                     });
+                }
+                else{
+                    swal('Something Wrong');
+                }
+            }
+           );
+    }
+</script>
+
+</html>
